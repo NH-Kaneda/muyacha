@@ -387,7 +387,7 @@ h1, h2, h3 {
   grid-column: 1;
   grid-row: 2;
   max-width: 420px;
-  margin-top: -8px; /* 近づけたいなら微調整 */
+  margin-top: -8px;
 }
 
 .hero-copy h1{
@@ -426,6 +426,11 @@ h1, h2, h3 {
   height: auto;
   display: block;
   border-radius: 32px;
+  transition: opacity .8s ease;
+}
+
+.hero-media img.is-fading{
+  opacity: 0;
 }
 
 /* スマホ */
