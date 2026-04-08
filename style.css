@@ -494,3 +494,35 @@ h1, h2, h3 {
 header img{
   max-width: none;
 }
+.hero-inner{
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* 左カラム */
+.hero-left{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+/* イラスト */
+.hero-left-visual{
+  width: 260px;
+  max-width: 100%;
+  opacity: 0.9;
+}
+
+/* テキスト */
+.hero-text{
+  max-width: 420px;
+}
+
+/* 右画像 */
+.hero-media{
+  max-width: 620px;
+  margin-left: auto;
+}
