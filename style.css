@@ -471,3 +471,26 @@ h1, h2, h3 {
 .logo-ja {
   font-family: "Noto Serif JP", serif;
 }
+
+/* ===== Instagram Icon Fix ===== */
+.header-nav img,
+.ig-link img{
+  width: 18px;
+  height: 18px;
+  max-width: none; /* ←これ超重要 */
+  display: block;
+  opacity: 0.8;
+}
+
+.ig-link img:hover{
+  opacity: 1;
+}
+.header-nav{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+/* header内の画像は小さく固定 */
+header img{
+  max-width: none;
+}
