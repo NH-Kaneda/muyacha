@@ -355,6 +355,27 @@ h1, h2, h3 {
   font-family: "Beth Ellen", cursive;
 }
 
+/* ===== Instagram Icon Fix ===== */
+.header-nav img,
+.ig-link img{
+  width: 18px;
+  height: 18px;
+  max-width: none; /* ←これ超重要 */
+  display: block;
+  opacity: 0.8;
+}
+
+.ig-link img:hover{
+  opacity: 1;
+}
+.header-nav{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+
+
 /* ===== Hero layout ===== */
 .hero{
   padding: 90px 0 120px;
