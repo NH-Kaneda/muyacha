@@ -480,7 +480,7 @@ p {
 }
 
 .hero-left-visual {
-  width: 300px;   /* ← 220px → 300px に大きく */
+  width: 560px;   /* ← 220px → 300px に大きく */
   max-width: 100%;
   display: block;
   opacity: 0.92;
@@ -490,7 +490,7 @@ p {
 .hero-copy {
   grid-column: 1;
   grid-row: 2;
-  max-width: 300px;
+  max-width: 260px;
   margin-top: -12px; /* イラストに少し近づける */
 }
 
@@ -520,7 +520,7 @@ p {
   grid-row: 1 / 3;
   align-self: center;
   width: 100%;
-  max-width: 540px; /* ← 620px → 540px に小さく */
+  max-width: 480px; /* ← 620px → 540px に小さく */
   margin-left: auto;
   border-radius: 32px;
   overflow: hidden;
