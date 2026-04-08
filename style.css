@@ -355,6 +355,119 @@ h1, h2, h3 {
   font-family: "Beth Ellen", cursive;
 }
 
+/* ===== Hero ===== */
+.hero{
+  position: relative;
+  overflow: hidden;
+  min-height: 78vh;
+  padding: 120px 0 100px;
+}
+
+.hero-inner{
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+/* 左の透過イラスト */
+.hero-left-visual{
+  position: absolute;
+  left: -40px;
+  bottom: -10px;
+  width: min(48vw, 700px);
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+/* テキスト */
+.hero-text{
+  position: relative;
+  z-index: 2;
+  max-width: 420px;
+  margin-left: 120px; /* 左ビジュアルと少し距離をとる */
+}
+
+.hero-text h1{
+  font-family: "Noto Serif JP", serif;
+  color: var(--brand);
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.hero-text .lead{
+  margin-top: 28px;
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--ink);
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 26ch;
+}
+
+/* 右の画像 */
+.hero-media{
+  position: relative;
+  z-index: 2;
+  border-radius: 32px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.35);
+}
+
+.hero-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 32px;
+  transition: opacity .8s ease;
+}
+
+.hero-media img.is-fading{
+  opacity: 0;
+}
+
+/* スマホ */
+@media (max-width: 900px){
+  .hero{
+    min-height: auto;
+    padding: 100px 0 72px;
+  }
+
+  .hero-inner{
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-left-visual{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: min(86vw, 520px);
+    margin: 0 auto;
+    display: block;
+    opacity: 0.82;
+  }
+
+  .hero-text{
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .hero-text h1,
+  .hero-text .lead{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .logo-ja {
   font-family: "Noto Serif JP", serif;
 }
