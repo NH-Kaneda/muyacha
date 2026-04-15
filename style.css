@@ -525,3 +525,70 @@ p {
   border-radius: 32px;
   overflow: hidden;
 }
+
+/* ===== Hero 重なり演出 ===== */
+
+/* 全体の基準 */
+.hero-layout{
+  position: relative;
+}
+
+/* 左：イラストを前面に出す */
+.hero-illust{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+.hero-left-visual{
+  width: 560px;        /* ←サイズここで調整 */
+  max-width: none;
+  position: relative;
+  left: 80px;          /* ←右に侵入させる */
+  opacity: 0.9;
+}
+
+/* 右：画像を少し左に寄せる */
+.hero-media{
+  grid-column: 2;
+  grid-row: 1 / 3;
+
+  max-width: 500px;    /* ←少し小さく */
+  margin-left: auto;
+
+  position: relative;
+  z-index: 2;
+
+  transform: translateX(-100px); /* ←重なりの核心 */
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+/* テキストは中間レイヤー */
+.hero-copy{
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== スマホは崩れ防止 ===== */
+@media (max-width: 900px){
+  .hero-illust{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .hero-left-visual{
+    width: 280px;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .hero-media{
+    transform: none;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
