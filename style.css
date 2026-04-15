@@ -415,7 +415,7 @@ p {
 /* 右画像：湯気の下に置く */
 .hero-media{
   position: absolute;
-  right: 40px;
+  right: 120px;
   top: 180px;   /* ← ここで「湯気の下」に下げる */
   z-index: 1;
   width: 520px;
