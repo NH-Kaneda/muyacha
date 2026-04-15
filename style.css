@@ -416,10 +416,10 @@ p {
 }
 
 .hero-left-visual{
-  width: 1000px;        /* ←サイズここで調整 */
+  width: 960px;        /* ←サイズここで調整 */
   max-width: none;
   position: relative;
-  left: 80px;          /* ←右に侵入させる */
+  left: 60px;          /* ←右に侵入させる */
   opacity: 0.9;
 }
 
@@ -436,7 +436,7 @@ p {
 
   transform: translateX(-100px, 60px); /* ←重なりの核心 */
   border-radius: 32px;
-     bottom: 60;
+  bottom: 60;
   overflow: hidden;
  
 }
