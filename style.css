@@ -542,7 +542,7 @@ p {
 }
 
 .hero-left-visual{
-  width: 560px;        /* ←サイズここで調整 */
+  width: 640px;        /* ←サイズここで調整 */
   max-width: none;
   position: relative;
   left: 80px;          /* ←右に侵入させる */
@@ -565,11 +565,7 @@ p {
   overflow: hidden;
 }
 
-/* テキストは中間レイヤー */
-.hero-copy{
-  position: relative;
-  z-index: 2;
-}
+
 
 /* ===== スマホは崩れ防止 ===== */
 @media (max-width: 900px){
