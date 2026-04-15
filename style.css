@@ -434,6 +434,17 @@ p {
 .hero-copy{
   display: none;
 }
+.hero{
+  padding: 40px 0 80px;
+}
+
+.hero-illust{
+  top: 20px;
+}
+
+.hero-media{
+  top: 140px;
+}
 
 /* スマホ */
 @media (max-width: 900px){
