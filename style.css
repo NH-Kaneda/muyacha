@@ -436,6 +436,7 @@ p {
 
   transform: translateX(-100px, 60px); /* ←重なりの核心 */
   border-radius: 32px;
+     bottom: 60;
   overflow: hidden;
  
 }
@@ -444,7 +445,7 @@ p {
 .hero-copy{
   position: absolute;
   left: 50%;
-  bottom: -60px;
+  bottom: 60px;
 
   transform: translateX(-50%);
   text-align: center;
