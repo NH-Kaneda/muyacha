@@ -411,6 +411,11 @@ p {
   opacity: 0.9;
 }
 
+.hero-layout{
+  position: relative;
+  min-height: 720px;
+}
+
 /* 右：画像 */
 .hero-media{
   grid-column: 2;
