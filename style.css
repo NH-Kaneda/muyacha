@@ -388,70 +388,68 @@ p {
 }
 
 /* ===== Hero ===== */
-
-/* ===== Hero 重なり演出 ===== */
+/* ===== Hero 重なり演出：整理版 ===== */
 
 /* 全体の基準 */
 .hero-layout{
   position: relative;
+  min-height: 760px;
 }
 
-/* 左：イラストを前面に出す */
+/* 左：イラスト */
 .hero-illust{
   position: absolute;
   left: 0;
-  bottom: 60;
+  bottom: 60px;
   z-index: 3;
 }
 
 .hero-left-visual{
-  width: 960px;        /* ←サイズここで調整 */
+  width: 560px;
   max-width: none;
   position: relative;
-  left: 40px;          /* ←右に侵入させる */
+  left: 40px;
   opacity: 0.9;
 }
 
-/* 右：画像を少し左に寄せる */
+/* 右：画像 */
 .hero-media{
   grid-column: 2;
   grid-row: 1 / 3;
-
-  max-width: 500px;    /* ←少し小さく */
+  max-width: 500px;
   margin-left: auto;
-
   position: relative;
   z-index: 2;
-
-  transform: translateX(-100px, 60px); /* ←重なりの核心 */
+  transform: translate(-20px, 80px);
   border-radius: 32px;
-  bottom: 60;
   overflow: hidden;
- 
 }
 
-/* ===== 文字：下中央っぽく配置 ===== */
+.hero-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 32px;
+}
+
+/* 文字：下中央 */
 .hero-copy{
   position: absolute;
   left: 50%;
-  bottom: 60px;
-
+  bottom: -20px;
   transform: translateX(-50%);
   text-align: center;
-
-  max-width: 480px;
+  max-width: 520px;
   width: 100%;
-
   z-index: 5;
 }
 
-/* タイトル */
 .hero-copy h1{
   font-size: clamp(26px, 3vw, 40px);
   line-height: 1.6;
   text-align: center;
 }
-/* 説明文 */
+
 .hero-copy .lead{
   margin-top: 16px;
   max-width: 24ch;
@@ -460,21 +458,12 @@ p {
   text-align: center;
 }
 
-/* ←ここ超重要 */
-.hero-layout{
-  position: relative; /* absoluteの基準にする */
-}
-
-.hero-copy{
-  position: static;
-  transform: none;
-  max-width: 520px;
-  margin: 36px auto 0;
-  text-align: center;
-  z-index: 5;
-}
-/* ===== スマホは崩れ防止 ===== */
+/* スマホ */
 @media (max-width: 900px){
+  .hero-layout{
+    min-height: auto;
+  }
+
   .hero-illust{
     position: relative;
     left: 0;
@@ -486,11 +475,27 @@ p {
     width: 280px;
     left: 0;
     margin: 0 auto;
+    max-width: 100%;
   }
 
   .hero-media{
     transform: none;
     max-width: 100%;
     margin-left: 0;
+  }
+
+  .hero-copy{
+    position: static;
+    transform: none;
+    margin: 24px auto 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-copy h1,
+  .hero-copy .lead{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
