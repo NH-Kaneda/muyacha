@@ -361,41 +361,30 @@ p {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .hero-layout {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    row-gap: 24px;
-  }
+.hero-layout{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "illust media"
+    "copy   copy";
+  column-gap: 40px;
+  row-gap: 24px;
+  align-items: end;
+}
 
-  .hero-illust {
-    grid-column: 1;
-    grid-row: 1;
-  }
+.hero-illust{
+  grid-area: illust;
+}
 
-  .hero-copy {
-    grid-column: 1;
-    grid-row: 2;
-    max-width: 100%;
-  }
+.hero-media{
+  grid-area: media;
+  max-width: 520px;
+  margin-left: auto;
+  transform: translateY(50px);
+}
 
-  .hero-media {
-    grid-column: 1;
-    grid-row: 3;
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-  .hero-copy h1,
-  .hero-copy .lead {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-left-visual {
-    margin: 0 auto;
-  }
+.hero-copy{
+  grid-area: copy;
 }
 
 /* ===== Hero ===== */
@@ -419,7 +408,7 @@ p {
   width: 960px;        /* ←サイズここで調整 */
   max-width: none;
   position: relative;
-  left: 60px;          /* ←右に侵入させる */
+  left: 40px;          /* ←右に侵入させる */
   opacity: 0.9;
 }
 
@@ -458,16 +447,17 @@ p {
 
 /* タイトル */
 .hero-copy h1{
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: clamp(26px, 3vw, 40px);
   line-height: 1.6;
+  text-align: center;
 }
-
 /* 説明文 */
 .hero-copy .lead{
-  margin-top: 14px;
+  margin-top: 16px;
   max-width: 24ch;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 /* ←ここ超重要 */
@@ -475,6 +465,14 @@ p {
   position: relative; /* absoluteの基準にする */
 }
 
+.hero-copy{
+  position: static;
+  transform: none;
+  max-width: 520px;
+  margin: 36px auto 0;
+  text-align: center;
+  z-index: 5;
+}
 /* ===== スマホは崩れ防止 ===== */
 @media (max-width: 900px){
   .hero-illust{
