@@ -400,15 +400,14 @@ p {
 .hero-illust{
   position: absolute;
   left: 0;
-  bottom: 60px;
+  top: 80px;     /* ← bottomじゃなくtopで置く */
   z-index: 3;
 }
 
 .hero-left-visual{
-  width: 560px;
+  width: 480px;  /* ← いったん安全サイズに戻す */
   max-width: none;
-  position: relative;
-  left: 40px;
+  display: block;
   opacity: 0.9;
 }
 
