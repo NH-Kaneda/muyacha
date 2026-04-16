@@ -474,3 +474,12 @@ p {
     max-width: 100%;
   }
 }
+/* ヘッダーフォント */
+.header-nav a{
+  font-family: "Lekton", "Noto Sans JP", sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+}
+.header-logo{
+  font-family: "Beth Ellen", cursive;
+}
