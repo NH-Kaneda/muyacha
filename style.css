@@ -73,10 +73,8 @@ header.site {
 
   display:flex;
   align-items:flex-end;
-  
   height: 72px;
   gap: 16px;
-   padding-bottom: 6px; /* ←下に寄せる微調整 */
 }
 
 .header-logo {
