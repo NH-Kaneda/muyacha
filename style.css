@@ -28,11 +28,8 @@ body {
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: "Noto Serif JP", serif;
-  line-height: 1.9;
-}
-body{
   font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.9;
 }
 
 img {
@@ -70,10 +67,10 @@ header.site {
 }
 
 .header-inner {
-
-  display:flex;
-  align-items:flex-end;
-  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* ロゴは中央 */
+  height: 84px;
   gap: 16px;
 }
 
@@ -99,13 +96,16 @@ header.site {
 
 .header-nav {
   display: flex;
-  align-items: center;
+  align-items: flex-end;   /* ナビだけ下揃え */
+  align-self: flex-end;
   gap: 22px;
+  padding-bottom: 10px;
 }
 
 .header-nav a {
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
+  font-family: "Lekton", "Noto Sans JP", sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
   color: var(--ink);
   opacity: 0.9;
   white-space: nowrap;
@@ -272,19 +272,56 @@ p {
 
 /* ===== Hero ===== */
 .hero {
-  padding: 80px 0 120px;
+  padding: 40px 0 80px;
 }
 
 .hero-layout {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 60px;
-  row-gap: 12px;
-  align-items: start;
+  position: relative;
+  min-height: 760px;
 }
 
+/* 左イラスト */
+.hero-illust {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  z-index: 3;
+}
 
+.hero-left-visual {
+  width: 960px;
+  max-width: none;
+  display: block;
+  opacity: 0.92;
+}
+
+/* 右画像 */
+.hero-media {
+  position: absolute;
+  right: 160px;   /* 右画像の中央寄せ調整 */
+  top: 140px;     /* ヘッダーに近づける */
+  z-index: 1;
+  width: 520px;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 32px;
+}
+
+.hero-media img.is-fading {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* 文字はいったん消す */
+.hero-copy {
+  display: none;
+}
 
 /* ===== Loading Screen ===== */
 .loader {
@@ -364,94 +401,12 @@ p {
 }
 
 /* ===== Responsive ===== */
-.hero-layout{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "illust media"
-    "copy   copy";
-  column-gap: 40px;
-  row-gap: 24px;
-  align-items: end;
-}
+@media (max-width: 900px) {
+  .hero {
+    padding: 24px 0 56px;
+  }
 
-.hero-illust{
-  grid-area: illust;
-}
-
-.hero-media{
-  grid-area: media;
-  max-width: 520px;
-  margin-left: auto;
-  transform: translateY(50px);
-}
-
-.hero-copy{
-  grid-area: copy;
-}
-
-/* ===== Hero visual only ===== */
-.hero{
-  padding: 80px 0 120px;
-}
-
-.hero-layout{
-  position: relative;
-  min-height: 760px;
-}
-
-/* 左イラスト */
-.hero-illust{
-  position: absolute;
-  left: 0;
-  top: 70px;
-  z-index: 3;
-}
-
-.hero-left-visual{
-  width: 960px;
-  max-width: none;
-  display: block;
-  opacity: 0.92;
-}
-
-/* 右画像：湯気の下に置く */
-.hero-media{
-  position: absolute;
-  right: 120px;
-  top: 180px;   /* ← ここで「湯気の下」に下げる */
-  z-index: 1;
-  width: 520px;
-  border-radius: 32px;
-  overflow: hidden;
-}
-
-.hero-media img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 32px;
-}
-
-/* 文字はいったん消す */
-.hero-copy{
-  display: none;
-}
-.hero{
-  padding: 40px 0 80px;
-}
-
-.hero-illust{
-  top: 20px;
-}
-
-.hero-media{
-  top: 140px;
-}
-
-/* スマホ */
-@media (max-width: 900px){
-  .hero-layout{
+  .hero-layout {
     min-height: auto;
     display: flex;
     flex-direction: column;
@@ -459,27 +414,18 @@ p {
   }
 
   .hero-illust,
-  .hero-media{
+  .hero-media {
     position: static;
     width: 100%;
   }
 
-  .hero-left-visual{
+  .hero-left-visual {
     width: min(92vw, 520px);
     max-width: 100%;
     margin: 0 auto;
   }
 
-  .hero-media{
+  .hero-media {
     max-width: 100%;
   }
-}
-/* ヘッダーフォント */
-.header-nav a{
-  font-family: "Lekton", "Noto Sans JP", sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.14em;
-}
-.header-logo{
-  font-family: "Beth Ellen", cursive;
 }
