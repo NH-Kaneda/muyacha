@@ -298,7 +298,7 @@ p {
 /* 右画像 */
 .hero-media {
   position: absolute;
-  right: 160px;   /* 右画像の中央寄せ調整 */
+  right: 100px;   /* 右画像の中央寄せ調整 */
   top: 140px;     /* ヘッダーに近づける */
   z-index: 1;
   width: 520px;
