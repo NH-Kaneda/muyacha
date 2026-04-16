@@ -429,3 +429,24 @@ p {
     max-width: 100%;
   }
 }
+
+/* ========= story ===========*/
+
+.story-narrow{
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;  /* ← 中央揃え */
+}
+
+.story-narrow p{
+  line-height: 2.2;
+}
+
+.story-image{
+  margin-top: 72px;
+}
+
+.story-image img{
+  width: 100%;
+  border-radius: 24px;
+}
