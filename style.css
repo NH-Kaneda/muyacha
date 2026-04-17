@@ -122,10 +122,11 @@ header.site {
   justify-content: center;
 }
 
-.ig-link img {
+.ig-link img{
   width: 22px;
   height: auto;
-  opacity: 0.85;
+  opacity: 0.9;
+  transform: translateY(1px);
 }
 .ig-link img:hover {
   opacity: 1;
