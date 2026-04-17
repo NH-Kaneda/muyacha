@@ -283,7 +283,7 @@ p {
 /* 左イラスト */
 .hero-illust {
   position: absolute;
-  left: 0;
+  left: 40;
   top: 20px;
   z-index: 3;
 }
