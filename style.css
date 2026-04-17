@@ -295,10 +295,10 @@ p {
 /* 右画像 */
 .hero-media {
   position: absolute;
-  right: 80px;   /* 右画像の中央寄せ調整 */
-  top: 140px;     /* ヘッダーに近づける */
+  right: 90px;   /* 右画像の中央寄せ調整 */
+  top: 170px;     /* ヘッダーに近づける */
   z-index: 1;
-  width: 520px;
+  width: 560px;
   border-radius: 32px;
   overflow: hidden;
 }
