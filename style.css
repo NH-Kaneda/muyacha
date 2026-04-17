@@ -123,14 +123,10 @@ header.site {
 }
 
 .ig-link img {
-  width: 18px;
-  height: 18px;
-  max-width: none;
-  display: block;
-  object-fit: contain;
+  width: 22px;
+  height: auto;
   opacity: 0.85;
 }
-
 .ig-link img:hover {
   opacity: 1;
 }
