@@ -3,11 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brand Story｜Muya</title>
-  <meta name="description" content="Muyaは、人生の大きな転換点から生まれました。内側から自分を癒し、労わるための、やさしい一杯。">
+
+  <title>ブランドストーリー｜Muya─木芽─</title>
+  <meta
+    name="description"
+    content="台湾で出会った水果茶から生まれた、Muya─木芽─のブランドストーリー。"
+  >
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Noto+Sans+JP:wght@400;600&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Noto+Sans+JP:wght@400;500;600&family=Noto+Serif+JP:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -15,97 +25,244 @@
 
 <body>
 
-<!-- ================= Header ================= -->
-<!-- Header -->
-<header class="site">
-  <div class="wrap header-inner">
-    <a href="index.html" class="header-logo" aria-label="Muya─木芽─ Home">
-      <span class="logo-en">Muya</span>
-    </a>
+  <!-- ================= Header ================= -->
+  <header class="site">
+    <div class="wrap header-inner">
 
-<nav class="header-nav">
-  <a href="story.html">ストーリー</a>
-  <a href="#concept">こだわり</a>
-  <a href="#blends">プロダクト</a>
-  <a href="#">オンラインショップ</a>
-  <a href="https://instagram.com/muya_cha" target="_blank" rel="noopener" class="ig-link">
-    <img src="images/icons/insta_simple.png" alt="Instagram">
-  </a>
-</nav>
-  </div>
-</header>
+      <a
+        href="index.html"
+        class="header-logo"
+        aria-label="Muya─木芽─ トップページ"
+      >
+        <span class="logo-en">Muya</span>
+      </a>
+
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="story.html" aria-current="page">ストーリー</a>
+        <a href="index.html#concept">こだわり</a>
+        <a href="index.html#blends">プロダクト</a>
+        <a href="#">オンラインショップ</a>
+
+        <a
+          href="https://instagram.com/muya_cha"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ig-link"
+          aria-label="MuyaのInstagram"
+        >
+          <img
+            src="images/icons/insta_simple.png"
+            alt=""
+          >
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================= Story ================= -->
+  <main class="story-page">
+
+    <div class="story-layout">
+
+      <!-- 左側：固定画像 -->
+      <aside class="story-visual" aria-label="ブランドストーリーのイメージ">
+
+        <div class="story-image-frame">
+
+          <img
+            class="story-image is-active"
+            src="images/story/story-01.webp"
+            alt="台湾で出会ったフルーツティー"
+            data-image="01"
+          >
+
+          <img
+            class="story-image"
+            src="images/story/story-02.webp"
+            alt="台湾の街と日常"
+            data-image="02"
+          >
+
+          <img
+            class="story-image"
+            src="images/story/story-03.webp"
+            alt="果実と台湾茶"
+            data-image="03"
+          >
+
+          <img
+            class="story-image"
+            src="images/story/story-04.webp"
+            alt="Muyaのフルーツティー"
+            data-image="04"
+          >
+
+        </div>
+
+        <p class="story-image-caption">
+          Muya─木芽─
+        </p>
+
+      </aside>
+
+      <!-- 右側：文章 -->
+      <div class="story-text">
+
+        <!-- 01 -->
+        <section
+          class="story-section story-intro"
+          data-target="01"
+        >
+          <p class="story-label">Brand Story</p>
+
+          <h1 class="story-main-title">
+            台湾で出会った、<br>
+            一杯のやさしさ。
+          </h1>
+
+          <p class="story-scroll-guide">
+            Scroll
+            <span aria-hidden="true"></span>
+          </p>
+        </section>
+
+        <!-- 02 -->
+        <section
+          class="story-section"
+          data-target="02"
+        >
+          <p>
+           『ちゃんとしたい』のに、
+　　　　　　　どこか心や体が追いつかない。
+
+　　　　　　　毎日を懸命に過ごしていると、
+　　　　　　　気づけば自分のことは後回し。
+
+　　　　　　　誰かのために頑張ることはできても、
+　　　　　　　自分を労わることは、意外と難しいものです。
 
 
-</head>
+          </p>
+
+          <p>
+            私自身も、
+自分を大切にすることを忘れてしまう時期がありました。
+
+そんなとき、台湾で出会った水果茶は、
+ただ喉を潤す飲みものではなく、
+「少し立ち止まってもいい」と教えてくれるような存在でした。
+
+あの穏やかな時間を、
+日本でも届けたい。
+
+そんな想いから生まれたのが、
+Muyaです。
+
+          </p>
+        </section>
+
+        <!-- 03 -->
+        <section
+          class="story-section"
+          data-target="03"
+        >
+          <p class="story-small-title">
+          Muya──木芽。
+
+中国語で「木芽」と書きます。
+
+木が静かに芽吹くように、
+人もまた、自分を労わる時間の積み重ねによって、
+少しずつ、本来の自分らしさを取り戻していく。
+
+そんな願いを、この名前に込めました。
 
 
+          </p>
+        </section>
 
-慌ただしい毎日の中で、
-気づけば自分のことを後回しにしてしまう。
+        <!-- 04 -->
+        <section
+          class="story-section story-last"
+          data-target="04"
+        >
+          <p class="story-small-title">
+         
+            木が芽吹くように、そっと内側を満たすもの。
+いたわり、寄り添い、ほどいていくもの。
 
-そんな日々を過ごしていた頃、
-台湾で「水果茶（フルーツティー）」に出会いました。
+          </p>
 
-香料ではなく、果実そのものが持つ香り。
-お茶と果実がゆっくり溶け合い、
-飲み終えたあとに残る、すっと軽くなるような心地よさ。
+          <div class="story-ending">
+            <p>
+           
 
-それは特別なものではなく、
-台湾では日常の中にある、ごく自然な一杯でした。
+Muyaは、そんな存在でありたいと願っています。
 
-⸻
 
-帰国してからも、
-「あの時間をもう一度味わいたい。」
+            <p class="story-final-message">
+         
+自分らしく芽吹く、そのきっかけになれますように。
+            </p>
+          </div>
 
-そう思って何度も試作を重ね、
-たどり着いたのが Muya のフルーツティーです。
+          <a href="index.html" class="story-back-link">
+            トップページへ戻る
+          </a>
+        </section>
 
-台湾の四季春茶に、
-日本の果実を合わせ、
-無香料・無着色・砂糖不使用で仕上げました。
+      </div>
+    </div>
 
-果実本来の甘みと、
-台湾茶のやさしい香りを、
-そのまま味わっていただけます。
+  </main>
 
-⸻
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="wrap center">
+      <p class="note">
+        © <span id="year"></span> Muya─木芽─. All rights reserved.
+      </p>
+    </div>
+  </footer>
 
-木が芽吹くように。
+  <script>
+    const year = document.getElementById("year");
 
-Muya──木芽。
+    if (year) {
+      year.textContent = new Date().getFullYear();
+    }
 
-木が静かに芽吹く瞬間のように、
-内側から少しずつ、自分の調子が整っていく。
+    const storySections = document.querySelectorAll(".story-section");
+    const storyImages = document.querySelectorAll(".story-image");
 
-お気に入りのカップにお湯を注ぎ、
-ゆっくり香りを楽しむ。
+    const changeStoryImage = (target) => {
+      storyImages.forEach((image) => {
+        image.classList.toggle(
+          "is-active",
+          image.dataset.image === target
+        );
+      });
+    };
 
-その数分が、
-今日のあなたを少しだけ軽くしてくれる。
+    const storyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            changeStoryImage(entry.target.dataset.target);
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.45
+      }
+    );
 
-Muyaは、
-そんな「整える時間」を届けるために生まれました。
+    storySections.forEach((section) => {
+      storyObserver.observe(section);
+    });
+  </script>
 
-あなたへ。
-
-そして、
-あなたの大切な人へ。
-
-大切なものは、いつでもシンプルでした。
-  
-  
-
+</body>
 </html>
-<!-- ================= Footer ================= -->
-<footer class="footer">
-  <div class="wrap center">
-    <p class="note">
-      © <span id="year"></span> Muyacha. All rights reserved.
-    </p>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
